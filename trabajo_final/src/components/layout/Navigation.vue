@@ -1,7 +1,7 @@
 <template>
-  <v-navigation-drawer class="dark accent-4" dark permanent app>
+  <v-navigation-drawer class="dark accent-4" dark app>
     <v-list>
-      <v-list-item v-for="item in items" :key="item.title" link>
+      <v-list-item v-for="item in items" :key="item.title" :to="item.link" link>
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
@@ -25,9 +25,9 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Photos", icon: "mdi-image" },
-        { title: "About", icon: "mdi-help-box" },
+        { title: "Home", icon: "mdi-view-dashboard", link:"/" },
+        { title: "Datos", icon: "mdi-access-point", link:"/api" },
+        { title: "Formulario", icon: "mdi-information" , link:"/form" },
       ],
       right: null,
     };

@@ -1,18 +1,18 @@
 <template>
   <div>
     <v-app-bar color="orange accent-4" dense dark app>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title >App Vue</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+        <v-icon>mdi-account</v-icon>
       </v-btn>
 
       <v-menu left bottom>
@@ -33,5 +33,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    //drawer: false;
+  }
+};
 </script>
