@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import drawer from "./modules/drawer.js"
 
 Vue.use(Vuex);
 
@@ -9,9 +8,7 @@ const store = new Vuex.Store({
     getters: {},
     mutations: {},
     actions: {},
-    modules: {
-        drawer,
-    },
+    modules: {},
 });
 
 export default store;
