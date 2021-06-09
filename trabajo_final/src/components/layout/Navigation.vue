@@ -2,6 +2,7 @@
   <v-navigation-drawer
     class="dark accent-4"
     dark
+    permanent
     app
     src="@/../public/city-of-brass.png"
   >

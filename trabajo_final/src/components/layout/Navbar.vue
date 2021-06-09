@@ -1,9 +1,7 @@
 <template>
   <div>
     <v-app-bar color="white accent-4" dense app>
-      <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title >App Vue</v-toolbar-title>
+      <v-toolbar-title>App Vue</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -33,11 +31,5 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    toggleDrawer() {
-      this.$store.dispatch("changeIsOpen");
-    }
-  }
-};
+export default {};
 </script>
