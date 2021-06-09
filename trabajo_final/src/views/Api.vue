@@ -19,8 +19,8 @@
       </v-card-text>
       <v-divider />
       <v-card-actions>
-        <v-btn text color="orange accent-4"> Dolar Compra </v-btn>
-        <v-btn text color="orange accent-4"> Dolar Venta </v-btn>
+        <v-btn text color="orange accent-4" @click="getValorCompra()"> Dolar Compra </v-btn>
+        <v-btn text color="orange accent-4" @click="getValorVenta()"> Dolar Venta </v-btn>
       </v-card-actions>
     </v-card>
     <br />
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import tempService from '@/services/tempService.js' 
 export default {
   name: "Api",
   data() {
@@ -56,6 +57,27 @@ export default {
       venta: "0.00",
     };
   },
-
+  methods: {
+    getValorCompra() {
+      tempService
+        .getCompra()
+        .then((response) => {
+          this.compra = response.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getValorVenta() {
+      tempService
+        .getVenta()
+        .then((response) => {
+          this.venta = response.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
 };
 </script>
