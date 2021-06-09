@@ -1,5 +1,16 @@
 <template>
-  <v-navigation-drawer class="dark accent-4" dark app>
+  <v-navigation-drawer
+    class="dark accent-4"
+    dark
+    app
+    src="@/../public/city-of-brass.png"
+  >
+    <template v-slot:img="props">
+      <v-img
+        v-bind="props"
+        gradient="to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)"
+      ></v-img>
+    </template>
     <v-list>
       <v-list-item v-for="item in items" :key="item.title" :to="item.link" link>
         <v-list-item-icon>
@@ -25,9 +36,9 @@ export default {
   data() {
     return {
       items: [
-        { title: "Home", icon: "mdi-view-dashboard", link:"/" },
-        { title: "Datos", icon: "mdi-access-point", link:"/api" },
-        { title: "Formulario", icon: "mdi-information" , link:"/form" },
+        { title: "Home", icon: "mdi-home", link: "/" },
+        { title: "Datos", icon: "mdi-access-point", link: "/api" },
+        { title: "Formulario", icon: "mdi-information", link: "/form" },
       ],
       right: null,
     };
