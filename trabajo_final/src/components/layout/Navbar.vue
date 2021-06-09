@@ -21,8 +21,12 @@
         </template>
 
         <v-list>
-          <v-list-item v-for="n in 5" :key="n" @click="() => {}">
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
+          <v-list-item
+            v-for="option in options"
+            :key="option"
+            @click="() => {}"
+          >
+            <v-list-item-title> {{ option }} </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -31,5 +35,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      options: ["Actualizar", "Opciones", "Ayuda", "Logout"],
+    };
+  },
+};
 </script>
