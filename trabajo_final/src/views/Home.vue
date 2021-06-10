@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-alert border="top" colored-border type="info" elevation="2">
+    <v-alert border="top" colored-border type="info" dark elevation="2">
       Hola {{ usuario }}. Queremos desearte un buen día. Que difrutes de la
       aplicación.
     </v-alert>

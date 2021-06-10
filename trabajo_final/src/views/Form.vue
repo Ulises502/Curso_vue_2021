@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-alert
-      border="left"
-      color="deep-orange"
-      dark
-    >
+    <v-alert border="left" colored-border type="info" dark elevation="2">
       Si nos das tu nombre y apellido, te saludamos!
     </v-alert>
     <v-form v-model="valid" ref="form">
