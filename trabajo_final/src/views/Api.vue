@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import tempService from '@/services/tempService.js' 
+import tempService from "../services/tempService";
 export default {
   name: "Api",
   data() {
@@ -62,10 +62,12 @@ export default {
       tempService
         .getCompra()
         .then((response) => {
-          this.compra = response.data;
+          console.log("BIEN");
+          console.log(response.data);
         })
         .catch((err) => {
           console.log(err);
+          console.log("ERROR")
         });
     },
     getValorVenta() {
