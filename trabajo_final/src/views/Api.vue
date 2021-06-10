@@ -62,12 +62,13 @@ export default {
       tempService
         .getCompra()
         .then((response) => {
-          console.log("BIEN");
-          console.log(response.data);
+          //console.log("BIEN");
+          //console.log(response.data);
+          this.compra = response.data
         })
         .catch((err) => {
           console.log(err);
-          console.log("ERROR")
+          //console.log("ERROR")
         });
     },
     getValorVenta() {
